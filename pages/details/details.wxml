@@ -33,7 +33,7 @@
     </view>
     <view class='book-catalog'>
       <view class='catelog-l'>
-        <view class='show-catalog'>
+        <view class='show-catalog' bindtap='jumpCatalog'>
           查看目录
         </view>
         <view class='catalogs'>
