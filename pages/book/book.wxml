@@ -1,5 +1,5 @@
 <!--pages/book/book.wxml-->
-<import src="/towxml/entry.wxml"/>
+<!-- <import src="/towxml/entry.wxml"/> -->
 
 <view class="book">
   <image src='/static/img/05.svg' class="loading" wx:if="{{isLoading}}"></image>

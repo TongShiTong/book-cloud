@@ -41,4 +41,28 @@ Page({
       url: `/pages/catalog/catalog?id=${this.data.bookId}`,
     })
   },
+  handleCollect(){
+    fetch.post('/collection',{bookId:this.data.bookId}).then(
+      res => {
+        if (res.code == 200) {
+          wx.showToast({
+            title: '收藏成功',
+            type: "success",
+            duration: 1000
+          })
+          let bookData = { ...this.data.bookData }
+          bookData.isCollect = 1
+          this.setData({
+            bookData: bookData
+          })
+        }
+    })  
+  },
+  onShareAppMessage(){
+    return {
+      title: this.data.bookData.data.title,
+      path:`/pages/details/details?=${this.data.bookId}`,
+      imageUrl: this.data.bookData.data.img
+    }
+  }
 })
