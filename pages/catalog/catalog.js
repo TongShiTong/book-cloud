@@ -18,7 +18,6 @@ Page({
       isLoading:true
     })
     fetch.get(`/titles/${this.data.bookId}`).then(res => {
-      console.log(res)
       this.setData({
         catalogData: res.data,
         isLoading:false

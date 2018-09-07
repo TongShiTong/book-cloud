@@ -50,5 +50,10 @@ const login = () => {
     }
   })
 }
+// const time = () => {
+//   let date= +new Date()
+
+// }
+
 exports.login = login;
 exports.fetch = fetch;

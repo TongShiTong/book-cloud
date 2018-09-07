@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view>
-  <view class="container index">
+  <view class='container index'>
     <image src="/static/img/01.svg" class='loading' wx:if="{{isLoading}}"></image>
     <!-- 轮播图 -->
     <view wx:else>

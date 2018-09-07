@@ -3,13 +3,36 @@
     "pages/index/index",
     "pages/details/details",
     "pages/catalog/catalog",
-    "pages/book/book"
+    "pages/book/book",
+    "pages/learning/learning",
+    "pages/self/self"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "云书",
+    "navigationBarTitleText": "书中阁",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"/static/img/sy.png",
+        "selectedIconPath": "/static/img/sy1.png"
+      },
+      {
+        "pagePath": "pages/learning/learning",
+        "text": "我的学习",
+        "iconPath": "/static/img/xx.png",
+        "selectedIconPath": "/static/img/xx1.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "个人中心",
+        "iconPath": "/static/img/grzx.png",
+        "selectedIconPath": "/static/img/grzx1.png"
+      }
+    ]
   }
-  
 }

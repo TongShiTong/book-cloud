@@ -1,0 +1,24 @@
+<!--pages/learning/learning.wxml-->
+<view class='container'>
+  <view class='learn-content' wx:for="{{readList}}" wx:key="{{index}}">
+    <view class='learn-l'>
+     <image src='{{item.book.img}}' class='img'></image>
+    </view>
+    <view class='learn-r'>
+      <text class='learn-title'>{{item.book.title}}</text>
+      <text class='learn-chapter'>书籍{{item.title.index}}/{{item.title.total}}章节</text>
+      <view class='learn-schedule'>
+        <progress percent="{{item.title.percent}}" stroke-width="4" style="width:300rpx"active="true" />
+        <text class='learn-seen'>已看{{item.title.percent}}%</text>
+      </view>
+      <view class='learn-seen-time'>
+        <text class='seen-title'>上次看到：{{item.title.title}}</text><text class='seen-time'>2天前</text>
+      </view> 
+      <view class='btn-tow'>
+        <button class='btn' bindtap='jumpRead' data-id="{{item.title._id}}" data-bookid="{{item.title.bookId}}" >继续阅读</button>
+        <button class='btn' bindtap='jumpDetail 'data-id="{{item.book._id}}" >查看文档</button>
+      </view>
+    </view>
+  </view>
+  <view class='learn-load'>已全部加载</view>
+</view>

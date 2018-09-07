@@ -1,0 +1,68 @@
+/* pages/self/self.wxss */
+.conter {
+background: #26a6f2;
+
+}
+
+.content {
+    display: flex;
+    padding: 40rpx 20rpx;
+}
+
+.content image {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 100rpx
+}
+
+.description {
+  width: 440rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 40rpx;
+}
+
+.description .username {
+  font-size: 24px;
+  color: #fff;
+}
+.description .message {
+  font-size: 16px;
+  color: #fff;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box .collection,.attention{
+  display: flex;
+  flex-direction: column;
+}
+
+.box text {
+  font-size: 16px;
+  color: #fff;
+}
+
+.sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sign .img {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 200rpx 0 20rpx 0;
+  border-radius: 50%;
+  box-shadow: -20px 3px 6px #b0def8;
+}
+
+.sign .name {
+  color: #26a6f2;
+  text-shadow: 2px 2px 1px #26a6f2;
+}

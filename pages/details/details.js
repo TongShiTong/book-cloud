@@ -55,6 +55,21 @@ Page({
           this.setData({
             bookData: bookData
           })
+        }else{
+          let arr = [this.data.bookId];
+          console.log(arr)
+          fetch.post('/collection/delete',{arr}).then(res => {
+            wx.showToast({
+              title: '取消成功',
+              icon:'loading',
+              duration:1000
+            })
+            let bookData = {...this.data.bookData}
+            bookData.isCollect = 0
+            this.setData({
+              bookData:bookData
+            })
+          })
         }
     })  
   },
