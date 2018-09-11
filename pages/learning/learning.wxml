@@ -1,5 +1,7 @@
 <!--pages/learning/learning.wxml-->
 <view class='container'>
+ <image src="/static/img/01.svg" class='loading' wx:if="{{isLoading}}"></image>
+ <view wx:else>
   <view class='learn-content' wx:for="{{readList}}" wx:key="{{index}}">
     <view class='learn-l'>
      <image src='{{item.book.img}}' class='img'></image>
@@ -12,7 +14,7 @@
         <text class='learn-seen'>已看{{item.title.percent}}%</text>
       </view>
       <view class='learn-seen-time'>
-        <text class='seen-title'>上次看到：{{item.title.title}}</text><text class='seen-time'>2天前</text>
+        <text class='seen-title'>上次看到：{{item.title.title}}</text><text class='seen-time'>{{item.time}}</text>
       </view> 
       <view class='btn-tow'>
         <button class='btn' bindtap='jumpRead' data-id="{{item.title._id}}" data-bookid="{{item.title.bookId}}" >继续阅读</button>
@@ -21,4 +23,5 @@
     </view>
   </view>
   <view class='learn-load'>已全部加载</view>
+</view>
 </view>

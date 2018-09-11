@@ -1,24 +1,27 @@
 <!--pages/self/self.wxml-->
 <view class='conter'>
-  <view class='content'>
-    <image src='{{userInfo.avatarUrl}}'></image>
-    <view class='description'>
-      <text class='username'>{{userInfo.nickName}}</text>
-      <text class='message'>这家伙很懒，什么也没留下~</text>
+  <image src="/static/img/01.svg" class='loading' wx:if="{{isLoading}}"></image>
+  <view wx:else>
+    <view class='content'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+      <view class='description'>
+        <text class='username'>{{userInfo.nickName}}</text>
+        <text class='message'>这家伙很懒，什么也没留下~</text>
+      </view>
+    </view>
+    <view class='box'>
+      <view class='collection'>
+        <text style="text-align:center">{{collectionNum.data}}</text>
+        <text>收藏</text>
+      </view>
+      <view class='attention'>
+        <text style="text-align:center">6</text>
+        <text>关注</text>
+      </view>
     </view>
   </view>
-  <view class='box'>
-    <view class='collection'>
-      <text style="text-align:center">{{collectionNum.data}}</text>
-      <text>收藏</text>
-    </view>
-    <view class='attention'>
-      <text style="text-align:center">6</text>
-      <text>关注</text>
-    </view>
+  <view class='sign'>
+    <image src="/static/img/yunge.jpg" class='img'></image>
+    <text class='name'>书中阁3.0</text>
   </view>
-</view>
-<view class='sign'>
-  <image src="/static/img/yunge.jpg" class='img'></image>
-  <text class='name'>书中阁3.0</text>
 </view>

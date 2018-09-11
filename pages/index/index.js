@@ -19,7 +19,6 @@ Page({
     loadDone: false
   },
   onLoad() {
-    // this._upDate()
     login()
     Promise.all([this.getData(), this.getContent()]).then(() => {
       this.setData({
@@ -64,16 +63,7 @@ Page({
       })
     })
   },
-  // _upDate(){
-  //   fetch.get('/category/books').then(res => {
-  //     console.log(res)
-  //     let t1 = +newDate
-  //     let t2 = Date.parse(new Date(res.data.books.updateTime))/1000
-  //     let time = t2-t1
-  //     console.log(time) 
-  //   })
-    
-  // },
+ 
 
   // 定义一个点击跳转事件
   jumpBook(event) {

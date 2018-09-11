@@ -4,7 +4,8 @@ Page({
 
   data: {
     userInfo: {}, // 表示用户的信息
-    collectionNum:{}
+    collectionNum:{},
+    isLoading: false
   },
   /**
    * 生命周期函数--监听页面加载
@@ -20,9 +21,17 @@ Page({
     })
   },
   getNum () {
+    this.setData({
+      isLoading: true
+    })
     fetch.get('/collection/total').then(res => {
       this.setData({
         collectionNum: res,
+        isLoading: false
+      })
+    }).catch(err => {
+      this.setData({
+        isLoading: false
       })
     })
   },
